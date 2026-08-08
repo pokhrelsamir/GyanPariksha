@@ -2,20 +2,6 @@
    GyanPariksha — Question Database
 ====================================================== */
 
-/*
-    Question Structure:
-
-    {
-        id: Number,
-        category: String,
-        difficulty: "Easy" | "Medium" | "Hard",
-        question: String,
-        options: Array,
-        answer: String,
-        explanation: String
-    }
-*/
-
 const quizQuestions = [
 
     /* ==================================================
