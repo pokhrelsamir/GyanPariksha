@@ -1,15 +1,19 @@
 # 🧠 GyanPariksha — Interactive Quiz Web Application
 
 <p align="center">
-  <img src="assets/images/banner.png" alt="GyanPariksha Banner" width="100%">
+  <img
+    src="https://github.com/user-attachments/assets/f64e74df-cb90-461c-ba9e-b1b56dd3c906"
+    alt="GyanPariksha Banner"
+    width="100%"
+  />
 </p>
 
 <p align="center">
-  <strong>Test Your Knowledge. Challenge Yourself. Improve Every Day.</strong>
+  <strong>ज्ञानसँगै अगाडि बढौँ — Learn, Challenge, Achieve.</strong>
 </p>
 
 <p align="center">
-  A modern, interactive and responsive quiz application built with HTML, CSS and JavaScript.
+  A modern, interactive, and responsive quiz application designed to test knowledge, improve learning, and provide an engaging quiz experience.
 </p>
 
 <p align="center">
@@ -17,111 +21,139 @@
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
   <img src="https://img.shields.io/badge/Responsive-Design-8A2BE2?style=for-the-badge" alt="Responsive Design">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License">
 </p>
 
 ---
 
 ## 📌 About GyanPariksha
 
-**GyanPariksha** is a modern browser-based quiz application designed to provide an engaging and interactive way to test general knowledge and improve learning through quizzes.
+**GyanPariksha** is a modern, browser-based interactive quiz application developed using **HTML5, CSS3, and Vanilla JavaScript**.
 
-The application provides a clean interface where users can select quiz settings, answer questions, track their progress and view their final performance.
+The application provides an engaging environment where users can configure a quiz, answer multiple-choice questions, track their progress, manage time, and evaluate their final performance.
 
-GyanPariksha is developed using **HTML5, CSS3 and Vanilla JavaScript**, making it lightweight, easy to understand and suitable for frontend web development projects.
+GyanPariksha focuses on combining a clean user interface with interactive functionality, animations, responsive design, and client-side data persistence.
+
+The project demonstrates practical frontend web development concepts while providing a simple and engaging quiz experience.
 
 ---
 
-## ✨ Features
+# ✨ Features
 
-### 🎯 Interactive Quiz
+## 🧠 Interactive Quiz
 
-* Start and complete quizzes through an interactive interface
-* Multiple-choice questions
-* Instant answer selection
-* Visual feedback for correct and incorrect answers
+* Multiple-choice quiz questions
+* Interactive answer selection
+* Correct and incorrect answer feedback
 * Automatic question progression
-* Question numbering and progress tracking
+* Question numbering
+* Real-time quiz progress
+* Final result calculation
 
-### ⚙️ Quiz Configuration
+---
 
-* Select quiz categories
-* Select difficulty levels
-* Configure quiz settings
-* Start a customized quiz session
+## ⚙️ Quiz Configuration
 
-### ⏱️ Quiz Timer
+Users can configure their quiz before starting.
 
-* Real-time countdown timer
+Features include:
+
+* Quiz category selection
+* Difficulty selection
+* Quiz customization
+* Easy-to-use configuration interface
+
+---
+
+## ⏱️ Countdown Timer
+
+GyanPariksha includes a real-time quiz timer.
+
+Features include:
+
+* Countdown timer
 * Visual timer feedback
 * Timer warning state
-* Automatic handling of time-based quiz sessions
+* Automatic handling of timed quizzes
 
-### 📊 Performance Tracking
+---
 
-After completing a quiz, users can view:
+## 📊 Performance Tracking
 
-* Final score
-* Correct answers
-* Incorrect answers
-* Accuracy
-* Overall performance
-* Best score
+After completing a quiz, users can view their performance through a dedicated result screen.
 
-### 💾 Local Data Storage
+Performance information can include:
 
-GyanPariksha uses browser **Local Storage** to preserve selected application data.
+* 🏆 Final score
+* ✅ Correct answers
+* ❌ Incorrect answers
+* 📈 Accuracy
+* 🎯 Quiz performance
+* ⭐ Best score
 
-This can be used for:
+---
 
-* Best score
-* Quiz statistics
-* Previous performance
-* Recent application data
+## 💾 Local Storage
 
-No database or backend server is required.
+GyanPariksha uses the browser's **Local Storage API** for client-side data persistence.
 
-### 🎨 Modern User Interface
+This allows information such as quiz statistics and best scores to remain available after refreshing the page.
 
-* Modern dashboard design
-* Glassmorphism-inspired interface
-* Interactive cards
+No database or traditional backend server is required for the core application.
+
+---
+
+## 🎨 Modern User Interface
+
+The application features a modern and visually engaging interface including:
+
+* Glassmorphism-inspired design
+* Modern cards
+* Gradient elements
 * Smooth transitions
+* Interactive buttons
 * Animated components
 * Clean typography
+* Visual feedback
 * User-friendly navigation
-* Responsive layout
 
-### 📱 Responsive Design
+---
 
-GyanPariksha adapts to different screen sizes including:
+## 📱 Responsive Design
 
-* Desktop
-* Laptop
-* Tablet
-* Mobile devices
+GyanPariksha is designed to adapt to different screen sizes:
 
-The responsive layout is handled through a dedicated `responsive.css` file.
+* 💻 Desktop
+* 💻 Laptop
+* 📟 Tablet
+* 📱 Mobile devices
 
-### ♿ Accessibility Considerations
+Responsive behavior is handled through a dedicated `responsive.css` file.
 
-The application includes accessibility-focused features such as:
+---
+
+## ♿ Accessibility
+
+The application includes accessibility-oriented considerations such as:
 
 * Keyboard interaction
-* Reduced-motion support
-* Appropriate interactive states
 * Touch-friendly controls
+* Reduced-motion support
 * Responsive layouts
+* Clear interactive states
 
 ---
 
 # 🖼️ Screenshots
 
-> Replace the image paths below with your actual screenshots when they are available.
-
 ## 🏠 GyanPariksha Home Screen
 
 <p align="center">
-  <img src="assets/images/home1.png" alt="GyanPariksha Home Screen" width="100%">
+  <img
+    src="https://github.com/user-attachments/assets/460f86d1-3ec8-4e76-845e-ab5c40630b4c"
+    alt="GyanPariksha Home Screen"
+    width="900"
+  />
 </p>
 
 ---
@@ -129,7 +161,11 @@ The application includes accessibility-focused features such as:
 ## ⚙️ Quiz Configuration
 
 <p align="center">
-  <img src="assets/images/configuration.png" alt="GyanPariksha Configuration Screen" width="100%">
+  <img
+    src="https://github.com/user-attachments/assets/15f6afc7-baaa-4248-9121-a2ce23c9d169"
+    alt="GyanPariksha Quiz Configuration"
+    width="900"
+  />
 </p>
 
 ---
@@ -137,7 +173,11 @@ The application includes accessibility-focused features such as:
 ## ❓ Quiz Question Screen
 
 <p align="center">
-  <img src="assets/images/quiz.png" alt="GyanPariksha Quiz Screen" width="100%">
+  <img
+    src="https://github.com/user-attachments/assets/e1ed317f-e522-481c-82c9-df7d04b20d36"
+    alt="GyanPariksha Quiz Question Screen"
+    width="900"
+  />
 </p>
 
 ---
@@ -145,21 +185,26 @@ The application includes accessibility-focused features such as:
 ## 📊 Quiz Result Screen
 
 <p align="center">
-  <img src="assets/images/result.png" alt="GyanPariksha Result Screen" width="100%">
+  <img
+    src="https://github.com/user-attachments/assets/6573eb25-7e71-4a3b-a713-6aa570383789"
+    alt="GyanPariksha Quiz Result Screen"
+    width="900"
+  />
 </p>
 
 ---
 
 # 🛠️ Technologies Used
 
-| Technology            | Purpose                                |
-| --------------------- | -------------------------------------- |
-| **HTML5**             | Application structure                  |
-| **CSS3**              | Styling and visual design              |
-| **JavaScript ES6+**   | Application logic and interactions     |
-| **Local Storage API** | Client-side data persistence           |
-| **CSS Animations**    | Interactive animations and transitions |
-| **Responsive CSS**    | Multi-device compatibility             |
+| Technology            | Purpose                            |
+| --------------------- | ---------------------------------- |
+| **HTML5**             | Application structure              |
+| **CSS3**              | Styling and visual design          |
+| **JavaScript ES6+**   | Application logic and interactions |
+| **Local Storage API** | Client-side data persistence       |
+| **CSS Animations**    | Animations and transitions         |
+| **Responsive CSS**    | Multi-device compatibility         |
+| **Browser DOM API**   | Dynamic interface manipulation     |
 
 ---
 
@@ -170,6 +215,7 @@ GyanPariksha/
 │
 ├── assets/
 │   ├── icons/
+│   │
 │   ├── images/
 │   │   ├── banner.png
 │   │   ├── home.png
@@ -199,34 +245,34 @@ GyanPariksha/
 
 # 🧩 Application Architecture
 
-GyanPariksha follows a modular frontend architecture.
+GyanPariksha follows a modular frontend architecture where application logic, UI management, quiz functionality, and storage operations are separated into dedicated JavaScript modules.
 
 ```text
-                    ┌──────────────────┐
-                    │    index.html    │
-                    │   Application UI │
-                    └────────┬─────────┘
-                             │
-                             ▼
-                    ┌──────────────────┐
-                    │      app.js      │
-                    │ Main Controller  │
-                    └────────┬─────────┘
-                             │
-              ┌──────────────┼──────────────┐
-              │              │              │
-              ▼              ▼              ▼
-       ┌────────────┐ ┌────────────┐ ┌──────────────┐
-       │  quiz.js   │ │   ui.js    │ │ storage.js   │
-       │ Quiz Logic │ │ UI Control │ │ LocalStorage │
-       └────────────┘ └────────────┘ └──────────────┘
-              │              │              │
-              └──────────────┼──────────────┘
-                             ▼
-                    ┌──────────────────┐
-                    │     Browser      │
-                    │     Storage      │
-                    └──────────────────┘
+                    ┌────────────────────┐
+                    │     index.html     │
+                    │   Application UI   │
+                    └─────────┬──────────┘
+                              │
+                              ▼
+                    ┌────────────────────┐
+                    │       app.js       │
+                    │  Main Controller   │
+                    └─────────┬──────────┘
+                              │
+              ┌───────────────┼───────────────┐
+              │               │               │
+              ▼               ▼               ▼
+       ┌─────────────┐ ┌─────────────┐ ┌─────────────┐
+       │   quiz.js   │ │    ui.js    │ │ storage.js  │
+       │  Quiz Logic │ │ UI Control  │ │ Local Data  │
+       └─────────────┘ └─────────────┘ └─────────────┘
+              │               │               │
+              └───────────────┼───────────────┘
+                              ▼
+                    ┌────────────────────┐
+                    │      Browser       │
+                    │   Local Storage    │
+                    └────────────────────┘
 ```
 
 ---
@@ -240,11 +286,11 @@ The main application controller.
 Responsibilities include:
 
 * Application initialization
-* Connecting different modules
+* Connecting application modules
 * Handling global events
-* Loading saved statistics
-* Keyboard interactions
-* Application state management
+* Managing application state
+* Initializing saved data
+* Managing user interactions
 
 ---
 
@@ -258,23 +304,25 @@ Responsibilities include:
 * Answer validation
 * Score calculation
 * Question progression
-* Timer handling
+* Timer management
 * Quiz completion
+* Performance calculation
 
 ---
 
 ## `ui.js`
 
-Responsible for the user interface.
+Responsible for managing the user interface.
 
 Responsibilities include:
 
 * Rendering questions
-* Displaying answers
-* Updating progress
-* Showing quiz results
+* Displaying answer options
+* Updating progress indicators
+* Showing correct and incorrect states
+* Displaying quiz results
 * Updating score information
-* Handling loading and error states
+* Managing loading and error states
 
 ---
 
@@ -282,22 +330,22 @@ Responsibilities include:
 
 Responsible for browser-based data persistence.
 
-It manages:
+Responsibilities include:
 
-* Best scores
-* Quiz statistics
-* Previous performance
-* Local Storage operations
+* Saving best scores
+* Loading stored statistics
+* Managing Local Storage
+* Maintaining client-side quiz data
 
 ---
 
 # 🎨 CSS Architecture
 
-GyanPariksha separates its styling into three dedicated files.
+GyanPariksha separates its styling into three dedicated CSS files.
 
-### `style.css`
+## `style.css`
 
-Contains the primary visual design:
+Contains the primary application design:
 
 * Layout
 * Colors
@@ -307,24 +355,30 @@ Contains the primary visual design:
 * Forms
 * Navigation
 * Quiz components
+* Result components
 
-### `animations.css`
+---
 
-Contains:
+## `animations.css`
+
+Contains application animations and transitions:
 
 * Page transitions
-* Button animations
+* Question animations
 * Answer animations
 * Correct-answer effects
 * Incorrect-answer effects
-* Loading animations
+* Button animations
 * Progress animations
-* Hover effects
+* Loading animations
 * Result animations
+* Hover effects
 
-### `responsive.css`
+---
 
-Contains responsive layouts for:
+## `responsive.css`
+
+Contains responsive behavior for:
 
 * Desktop
 * Laptop
@@ -341,50 +395,50 @@ Contains responsive layouts for:
 
 ```text
                     User Opens GyanPariksha
-                             │
-                             ▼
+                              │
+                              ▼
                     Application Initializes
-                             │
-                             ▼
-                    Select Quiz Settings
-                             │
-                 ┌───────────┴───────────┐
-                 │                       │
-                 ▼                       ▼
-             Category                Difficulty
-                 │                       │
-                 └───────────┬───────────┘
-                             ▼
+                              │
+                              ▼
+                    Configure Quiz Settings
+                              │
+                 ┌────────────┴────────────┐
+                 │                         │
+                 ▼                         ▼
+             Category                  Difficulty
+                 │                         │
+                 └────────────┬────────────┘
+                              ▼
                          Start Quiz
-                             │
-                             ▼
-                     Display Question
-                             │
-                             ▼
-                       Select Answer
-                             │
-                             ▼
-                    Validate Answer
-                             │
-                 ┌───────────┴───────────┐
-                 │                       │
-                 ▼                       ▼
-              Correct                 Incorrect
-                 │                       │
-                 └───────────┬───────────┘
-                             ▼
+                              │
+                              ▼
+                      Display Question
+                              │
+                              ▼
+                        Select Answer
+                              │
+                              ▼
+                       Validate Answer
+                              │
+                 ┌────────────┴────────────┐
+                 │                         │
+                 ▼                         ▼
+             Correct                   Incorrect
+                 │                         │
+                 └────────────┬────────────┘
+                              ▼
                        Next Question
-                             │
-                             ▼
-                       Quiz Completed
-                             │
-                             ▼
+                              │
+                              ▼
+                        Quiz Complete
+                              │
+                              ▼
                        Calculate Score
-                             │
-                             ▼
-                      Display Results
-                             │
-                             ▼
+                              │
+                              ▼
+                       Display Results
+                              │
+                              ▼
                     Save Best Statistics
 ```
 
@@ -392,38 +446,37 @@ Contains responsive layouts for:
 
 # ⌨️ Keyboard Controls
 
-GyanPariksha supports keyboard interaction for a faster quiz experience.
+GyanPariksha can support keyboard interaction for faster quiz navigation.
 
-| Key     | Action                    |
-| ------- | ------------------------- |
-| `1`     | Select option 1           |
-| `2`     | Select option 2           |
-| `3`     | Select option 3           |
-| `4`     | Select option 4           |
-| `Enter` | Continue to next question |
-| `Space` | Continue to next question |
+| Key     | Action                        |
+| ------- | ----------------------------- |
+| `1`     | Select option 1               |
+| `2`     | Select option 2               |
+| `3`     | Select option 3               |
+| `4`     | Select option 4               |
+| `Enter` | Continue to the next question |
+| `Space` | Continue to the next question |
 
-Keyboard controls are disabled while the user is typing inside form elements.
+Keyboard interactions are designed to avoid interfering with text input fields.
 
 ---
 
 # 💾 Data Persistence
 
-GyanPariksha uses the browser's **Local Storage API**.
+GyanPariksha uses the browser's **Local Storage API** for client-side persistence.
 
-This allows the application to preserve information even after the browser page is refreshed.
-
-Example data may include:
+Depending on the application's configuration, stored information may include:
 
 ```text
 Best Score
-Total Quizzes
-Correct Answers
-Average Accuracy
 Quiz Statistics
+Correct Answers
+Total Quizzes
+Accuracy
+Previous Performance
 ```
 
-Because the data is stored locally, no user account or backend database is required.
+All stored data remains within the user's browser.
 
 ---
 
@@ -432,7 +485,7 @@ Because the data is stored locally, no user account or backend database is requi
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/GyanPariksha.git
+git clone https://github.com/pokhrelsamir/GyanPariksha.git
 ```
 
 ## 2. Navigate to the Project
@@ -443,32 +496,33 @@ cd GyanPariksha
 
 ## 3. Open the Project
 
-Open the project using **Visual Studio Code**.
+Open the project folder using **Visual Studio Code**.
 
 ## 4. Run with Live Server
 
 For the best development experience:
 
-1. Install the **Live Server** extension.
+1. Install the **Live Server** extension in VS Code.
 2. Open `index.html`.
-3. Right-click the file.
+3. Right-click `index.html`.
 4. Select **Open with Live Server**.
 
-GyanPariksha will then open in your default browser.
+The application will open in your default browser.
 
 ---
 
 # 🌐 Browser Compatibility
 
-GyanPariksha is designed for modern browsers that support:
+GyanPariksha is designed for modern browsers supporting:
 
 * HTML5
 * CSS3
-* ES6 JavaScript
+* ECMAScript 6+
 * Local Storage
 * Modern DOM APIs
+* CSS animations and transitions
 
-Recommended browsers:
+Recommended browsers include:
 
 * Google Chrome
 * Microsoft Edge
@@ -480,9 +534,9 @@ Recommended browsers:
 
 # 🔐 Privacy
 
-GyanPariksha does not require users to create an account.
+GyanPariksha does not require users to create an account for the core quiz functionality.
 
-Application data such as scores and statistics can be stored locally in the user's browser.
+The application can store quiz-related information locally using the browser's Local Storage API.
 
 No personal information is required to use the basic application.
 
@@ -490,17 +544,17 @@ No personal information is required to use the basic application.
 
 # 🔮 Future Improvements
 
-The project can be extended with the following features:
+Potential future enhancements include:
 
 * [ ] 🌐 Online question database
 * [ ] 🏆 Global leaderboard
 * [ ] 👤 User authentication
-* [ ] 📚 More quiz categories
+* [ ] 📚 Additional quiz categories
 * [ ] 🧠 Advanced difficulty system
 * [ ] 📈 Detailed performance analytics
 * [ ] 🕘 Quiz history
 * [ ] ⭐ Favorite questions
-* [ ] 🌙 Dark/Light theme
+* [ ] 🌙 Dark and light themes
 * [ ] 🔊 Sound effects
 * [ ] 🎵 Background music
 * [ ] 🏅 Achievement system
@@ -510,9 +564,33 @@ The project can be extended with the following features:
 
 ---
 
+# 🧪 Testing Checklist
+
+Before committing changes, verify the following:
+
+* [ ] Application loads correctly
+* [ ] Quiz configuration works
+* [ ] Quiz starts correctly
+* [ ] Questions display correctly
+* [ ] Answer selection works
+* [ ] Correct answers are identified
+* [ ] Incorrect answers are identified
+* [ ] Timer works correctly
+* [ ] Progress indicator updates
+* [ ] Next-question navigation works
+* [ ] Final score is calculated correctly
+* [ ] Result screen displays correctly
+* [ ] Best score is saved
+* [ ] Stored data remains after refresh
+* [ ] Responsive layout works
+* [ ] Animations work correctly
+* [ ] No JavaScript errors appear in the browser console
+
+---
+
 # 🤝 Contributing
 
-Contributions are welcome.
+Contributions are welcome and appreciated.
 
 If you would like to improve GyanPariksha:
 
@@ -549,29 +627,6 @@ Open a Pull Request and describe the changes you made.
 
 ---
 
-# 🧪 Testing Checklist
-
-Before committing changes, verify:
-
-* [ ] Application loads correctly
-* [ ] Quiz settings work
-* [ ] Quiz starts correctly
-* [ ] Questions display correctly
-* [ ] Answer selection works
-* [ ] Correct answers are identified
-* [ ] Incorrect answers are identified
-* [ ] Timer works correctly
-* [ ] Progress indicator updates
-* [ ] Next-question navigation works
-* [ ] Final score is calculated
-* [ ] Result screen displays correctly
-* [ ] Best score is saved
-* [ ] Page refresh preserves required data
-* [ ] Responsive layout works
-* [ ] No JavaScript errors appear in the console
-
----
-
 # 📜 License
 
 This project is licensed under the **MIT License**.
@@ -588,7 +643,7 @@ See the [`LICENSE`](LICENSE) file for more information.
 
 Frontend Developer | Django Developer | Data Enthusiast
 
-<p>
+<p align="left">
   <a href="https://github.com/pokhrelsamir">
     <img src="https://img.shields.io/badge/GitHub-pokhrelsamir-181717?style=for-the-badge&logo=github" alt="GitHub">
   </a>
@@ -603,12 +658,12 @@ Frontend Developer | Django Developer | Data Enthusiast
 
 If you find **GyanPariksha** useful, consider giving the repository a ⭐ on GitHub.
 
-Your feedback, suggestions, and contributions are always appreciated.
+Feedback, suggestions, improvements, and contributions are always welcome.
 
 ---
 
 <p align="center">
   <strong>🧠 GyanPariksha</strong>
   <br>
-  Test Your Knowledge. Challenge Yourself. Improve Every Day.
+  ज्ञानसँगै अगाडि बढौँ — Learn, Challenge, Achieve.
 </p>
