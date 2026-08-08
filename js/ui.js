@@ -19,6 +19,8 @@ const UI = {
 
     timeRemaining: 30,
 
+    themeKey: "GyanParikshaTheme",
+
 
     /* --------------------------------------------------
        INITIALIZE UI
@@ -31,6 +33,8 @@ const UI = {
         }
 
         this.cacheElements();
+
+        this.loadTheme();
 
         this.bindEvents();
 
@@ -138,6 +142,9 @@ const UI = {
             homeButton:
                 document.querySelector("#homeButton"),
 
+            themeToggle:
+                document.querySelector("#themeToggle"),
+
 
             /* Results */
 
@@ -208,6 +215,16 @@ const UI = {
             this.elements.homeButton.addEventListener(
                 "click",
                 () => this.restartQuiz()
+            );
+
+        }
+
+
+        if (this.elements.themeToggle) {
+
+            this.elements.themeToggle.addEventListener(
+                "click",
+                () => this.toggleTheme()
             );
 
         }
@@ -644,6 +661,106 @@ const UI = {
                     circumference *
                     (1 - percentage)
                 );
+
+        }
+
+    },
+
+
+    /* --------------------------------------------------
+       THEME
+    -------------------------------------------------- */
+
+    loadTheme() {
+
+        let savedTheme = null;
+
+        try {
+
+            savedTheme =
+                localStorage.getItem(
+                    this.themeKey
+                );
+
+        }
+        catch (error) {
+
+            savedTheme = null;
+
+        }
+
+        this.applyTheme(
+            savedTheme === "light"
+                ? "light"
+                : "dark"
+        );
+
+    },
+
+
+    toggleTheme() {
+
+        const nextTheme =
+            document.body.classList.contains(
+                "light"
+            )
+                ? "dark"
+                : "light";
+
+        this.applyTheme(
+            nextTheme
+        );
+
+        try {
+
+            localStorage.setItem(
+                this.themeKey,
+                nextTheme
+            );
+
+        }
+        catch (error) {
+
+            console.warn(
+                "Unable to save theme preference.",
+                error
+            );
+
+        }
+
+    },
+
+
+    applyTheme(theme) {
+
+        const isLight =
+            theme === "light";
+
+        document.body.classList.toggle(
+            "light",
+            isLight
+        );
+
+        if (this.elements.themeToggle) {
+
+            this.elements.themeToggle.textContent =
+                isLight
+                    ? "☀️"
+                    : "🌙";
+
+            this.elements.themeToggle.setAttribute(
+                "aria-label",
+                isLight
+                    ? "Switch to dark theme"
+                    : "Switch to light theme"
+            );
+
+            this.elements.themeToggle.setAttribute(
+                "title",
+                isLight
+                    ? "Switch to dark theme"
+                    : "Switch to light theme"
+            );
 
         }
 
