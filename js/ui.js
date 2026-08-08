@@ -152,6 +152,12 @@ const UI = {
                 document.querySelector("#finalScore") ||
                 document.querySelector("#score"),
 
+            totalQuestions:
+                document.querySelector("#totalQuestions"),
+
+            scoreProgress:
+                document.querySelector("#scoreProgress"),
+
             correct:
                 document.querySelector("#correctAnswers") ||
                 document.querySelector("#correct"),
@@ -803,7 +809,29 @@ const UI = {
     if (this.elements.score) {
 
         this.elements.score.textContent =
-            result.score;
+            result.correct;
+
+    }
+
+
+    if (this.elements.totalQuestions) {
+
+        this.elements.totalQuestions.textContent =
+            `/ ${result.total}`;
+
+    }
+
+
+    if (this.elements.scoreProgress) {
+
+        const circumference =
+            534;
+
+        this.elements.scoreProgress.style.strokeDashoffset =
+            String(
+                circumference *
+                (1 - result.accuracy / 100)
+            );
 
     }
 
