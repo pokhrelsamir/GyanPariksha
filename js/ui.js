@@ -1,8 +1,11 @@
 /* ======================================================
-   QuizOnline — UI Controller
+   GyanPariksha — UI Controller
 ====================================================== */
 
 const UI = {
+
+    initialized: false,
+
 
     /* --------------------------------------------------
        DOM ELEMENTS
@@ -17,11 +20,17 @@ const UI = {
 
     init() {
 
+        if (this.initialized) {
+            return;
+        }
+
         this.cacheElements();
 
         this.bindEvents();
 
         this.showHome();
+
+        this.initialized = true;
 
     },
 
@@ -43,15 +52,21 @@ const UI = {
             /* Screens */
 
             home:
+                document.querySelector("#homeScreen") ||
                 document.querySelector("#home") ||
+                document.querySelector(".home-screen") ||
                 document.querySelector(".home"),
 
             quiz:
+                document.querySelector("#quizScreen") ||
                 document.querySelector("#quiz") ||
+                document.querySelector(".quiz-screen") ||
                 document.querySelector(".quiz"),
 
             result:
+                document.querySelector("#resultScreen") ||
                 document.querySelector("#result") ||
+                document.querySelector(".result-screen") ||
                 document.querySelector(".result"),
 
 
@@ -70,16 +85,20 @@ const UI = {
             /* Quiz */
 
             question:
+                document.querySelector("#questionText") ||
                 document.querySelector("#question"),
 
             options:
+                document.querySelector("#answersContainer") ||
                 document.querySelector("#options") ||
+                document.querySelector(".answers") ||
                 document.querySelector(".options"),
 
             progress:
                 document.querySelector("#progress"),
 
             progressBar:
+                document.querySelector("#progressFill") ||
                 document.querySelector("#progressBar"),
 
             questionNumber:
@@ -100,19 +119,26 @@ const UI = {
                 document.querySelector("#next"),
 
             restartButton:
+                document.querySelector("#retryQuiz") ||
                 document.querySelector("#restartQuiz") ||
                 document.querySelector("#restart"),
+
+            homeButton:
+                document.querySelector("#homeButton"),
 
 
             /* Results */
 
             score:
+                document.querySelector("#finalScore") ||
                 document.querySelector("#score"),
 
             correct:
+                document.querySelector("#correctAnswers") ||
                 document.querySelector("#correct"),
 
             wrong:
+                document.querySelector("#wrongAnswers") ||
                 document.querySelector("#wrong"),
 
             accuracy:
@@ -158,6 +184,16 @@ const UI = {
         if (this.elements.restartButton) {
 
             this.elements.restartButton.addEventListener(
+                "click",
+                () => this.restartQuiz()
+            );
+
+        }
+
+
+        if (this.elements.homeButton) {
+
+            this.elements.homeButton.addEventListener(
                 "click",
                 () => this.restartQuiz()
             );
@@ -304,7 +340,7 @@ const UI = {
                 button.type = "button";
 
                 button.className =
-                    "quiz-option";
+                    "answer-option quiz-option";
 
 
                 button.dataset.index =
@@ -313,13 +349,15 @@ const UI = {
 
                 button.innerHTML = `
 
-                    <span class="option-letter">
+                    <span class="answer-letter option-letter">
                         ${String.fromCharCode(65 + index)}
                     </span>
 
-                    <span class="option-text">
+                    <span class="answer-text option-text">
                         ${this.escapeHTML(option)}
                     </span>
+
+                    <span class="answer-status"></span>
 
                 `;
 
@@ -565,7 +603,11 @@ const UI = {
     }
 
 
-    if (this.elements.bestScore) {
+    if (
+        this.elements.bestScore &&
+        typeof StorageManager !==
+        "undefined"
+    ) {
 
         this.elements.bestScore.textContent =
             StorageManager.getBestScore();
@@ -584,7 +626,7 @@ const UI = {
 
     );
 
-}
+},
 
 
     /* --------------------------------------------------
@@ -657,7 +699,7 @@ const UI = {
         const previous =
             Number(
                 localStorage.getItem(
-                    "quizOnlineBestScore"
+                    "GyanParikshaBestScore"
                 ) || 0
             );
 
@@ -670,7 +712,7 @@ const UI = {
 
 
         localStorage.setItem(
-            "quizOnlineBestScore",
+            "GyanParikshaBestScore",
             best
         );
 

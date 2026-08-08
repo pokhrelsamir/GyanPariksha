@@ -1,7 +1,7 @@
-# 🧠 QuizOnline — Interactive Quiz Web Application
+# 🧠 GyanPariksha — Interactive Quiz Web Application
 
 <p align="center">
-  <img src="assets/images/banner.png" alt="QuizOnline Banner" width="100%">
+  <img src="assets/images/banner.png" alt="GyanPariksha Banner" width="100%">
 </p>
 
 <p align="center">
@@ -21,13 +21,13 @@
 
 ---
 
-## 📌 About QuizOnline
+## 📌 About GyanPariksha
 
-**QuizOnline** is a modern browser-based quiz application designed to provide an engaging and interactive way to test general knowledge and improve learning through quizzes.
+**GyanPariksha** is a modern browser-based quiz application designed to provide an engaging and interactive way to test general knowledge and improve learning through quizzes.
 
 The application provides a clean interface where users can select quiz settings, answer questions, track their progress and view their final performance.
 
-QuizOnline is developed using **HTML5, CSS3 and Vanilla JavaScript**, making it lightweight, easy to understand and suitable for frontend web development projects.
+GyanPariksha is developed using **HTML5, CSS3 and Vanilla JavaScript**, making it lightweight, easy to understand and suitable for frontend web development projects.
 
 ---
 
@@ -69,7 +69,7 @@ After completing a quiz, users can view:
 
 ### 💾 Local Data Storage
 
-QuizOnline uses browser **Local Storage** to preserve selected application data.
+GyanPariksha uses browser **Local Storage** to preserve selected application data.
 
 This can be used for:
 
@@ -93,7 +93,7 @@ No database or backend server is required.
 
 ### 📱 Responsive Design
 
-QuizOnline adapts to different screen sizes including:
+GyanPariksha adapts to different screen sizes including:
 
 * Desktop
 * Laptop
@@ -118,10 +118,10 @@ The application includes accessibility-focused features such as:
 
 > Replace the image paths below with your actual screenshots when they are available.
 
-## 🏠 QuizOnline Home Screen
+## 🏠 GyanPariksha Home Screen
 
 <p align="center">
-  <img src="assets/images/home.png" alt="QuizOnline Home Screen" width="100%">
+  <img src="assets/images/home.png" alt="GyanPariksha Home Screen" width="100%">
 </p>
 
 ---
@@ -129,7 +129,7 @@ The application includes accessibility-focused features such as:
 ## ⚙️ Quiz Configuration
 
 <p align="center">
-  <img src="assets/images/configuration.png" alt="QuizOnline Configuration Screen" width="100%">
+  <img src="assets/images/configuration.png" alt="GyanPariksha Configuration Screen" width="100%">
 </p>
 
 ---
@@ -137,7 +137,7 @@ The application includes accessibility-focused features such as:
 ## ❓ Quiz Question Screen
 
 <p align="center">
-  <img src="assets/images/quiz.png" alt="QuizOnline Quiz Screen" width="100%">
+  <img src="assets/images/quiz.png" alt="GyanPariksha Quiz Screen" width="100%">
 </p>
 
 ---
@@ -145,7 +145,7 @@ The application includes accessibility-focused features such as:
 ## 📊 Quiz Result Screen
 
 <p align="center">
-  <img src="assets/images/result.png" alt="QuizOnline Result Screen" width="100%">
+  <img src="assets/images/result.png" alt="GyanPariksha Result Screen" width="100%">
 </p>
 
 ---
@@ -166,7 +166,7 @@ The application includes accessibility-focused features such as:
 # 📂 Project Structure
 
 ```text
-QuizOnline/
+GyanPariksha/
 │
 ├── assets/
 │   ├── icons/
@@ -199,7 +199,7 @@ QuizOnline/
 
 # 🧩 Application Architecture
 
-QuizOnline follows a modular frontend architecture.
+GyanPariksha follows a modular frontend architecture.
 
 ```text
                     ┌──────────────────┐
@@ -293,7 +293,7 @@ It manages:
 
 # 🎨 CSS Architecture
 
-QuizOnline separates its styling into three dedicated files.
+GyanPariksha separates its styling into three dedicated files.
 
 ### `style.css`
 
@@ -340,7 +340,7 @@ Contains responsive layouts for:
 # 🔄 Application Workflow
 
 ```text
-                    User Opens QuizOnline
+                    User Opens GyanPariksha
                              │
                              ▼
                     Application Initializes
@@ -392,7 +392,7 @@ Contains responsive layouts for:
 
 # ⌨️ Keyboard Controls
 
-QuizOnline supports keyboard interaction for a faster quiz experience.
+GyanPariksha supports keyboard interaction for a faster quiz experience.
 
 | Key     | Action                    |
 | ------- | ------------------------- |
@@ -409,7 +409,7 @@ Keyboard controls are disabled while the user is typing inside form elements.
 
 # 💾 Data Persistence
 
-QuizOnline uses the browser's **Local Storage API**.
+GyanPariksha uses the browser's **Local Storage API**.
 
 This allows the application to preserve information even after the browser page is refreshed.
 
@@ -432,13 +432,13 @@ Because the data is stored locally, no user account or backend database is requi
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/QuizOnline.git
+git clone https://github.com/yourusername/GyanPariksha.git
 ```
 
 ## 2. Navigate to the Project
 
 ```bash
-cd QuizOnline
+cd GyanPariksha
 ```
 
 ## 3. Open the Project
@@ -454,13 +454,13 @@ For the best development experience:
 3. Right-click the file.
 4. Select **Open with Live Server**.
 
-QuizOnline will then open in your default browser.
+GyanPariksha will then open in your default browser.
 
 ---
 
 # 🌐 Browser Compatibility
 
-QuizOnline is designed for modern browsers that support:
+GyanPariksha is designed for modern browsers that support:
 
 * HTML5
 * CSS3
@@ -480,7 +480,7 @@ Recommended browsers:
 
 # 🔐 Privacy
 
-QuizOnline does not require users to create an account.
+GyanPariksha does not require users to create an account.
 
 Application data such as scores and statistics can be stored locally in the user's browser.
 
@@ -514,7 +514,7 @@ The project can be extended with the following features:
 
 Contributions are welcome.
 
-If you would like to improve QuizOnline:
+If you would like to improve GyanPariksha:
 
 ### 1. Fork the Repository
 
@@ -601,14 +601,14 @@ Frontend Developer | Django Developer | Data Enthusiast
 
 # ⭐ Support
 
-If you find **QuizOnline** useful, consider giving the repository a ⭐ on GitHub.
+If you find **GyanPariksha** useful, consider giving the repository a ⭐ on GitHub.
 
 Your feedback, suggestions, and contributions are always appreciated.
 
 ---
 
 <p align="center">
-  <strong>🧠 QuizOnline</strong>
+  <strong>🧠 GyanPariksha</strong>
   <br>
   Test Your Knowledge. Challenge Yourself. Improve Every Day.
 </p>

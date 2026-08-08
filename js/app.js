@@ -1,5 +1,5 @@
 /* ======================================================
-   QuizOnline — Main Application Controller
+   GyanPariksha — Main Application Controller
 ====================================================== */
 
 
@@ -24,7 +24,7 @@ const App = {
 
 
         console.log(
-            "QuizOnline initializing..."
+            "GyanPariksha initializing..."
         );
 
 
@@ -106,7 +106,7 @@ const App = {
 
 
         console.log(
-            "QuizOnline initialized successfully."
+            "GyanPariksha initialized successfully."
         );
 
     },
@@ -415,14 +415,14 @@ const App = {
         ) {
 
             console.log(
-                "QuizOnline paused in background."
+                "GyanPariksha paused in background."
             );
 
         }
         else {
 
             console.log(
-                "QuizOnline active."
+                "GyanPariksha active."
             );
 
         }
@@ -448,7 +448,7 @@ const App = {
 
         const confirmed =
             window.confirm(
-                "Are you sure you want to delete all QuizOnline data?"
+                "Are you sure you want to delete all GyanPariksha data?"
             );
 
 
@@ -479,7 +479,7 @@ const App = {
         return {
 
             name:
-                "QuizOnline",
+                "GyanPariksha",
 
             version:
                 "1.0.0",
