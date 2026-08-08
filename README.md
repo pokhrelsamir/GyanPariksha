@@ -121,7 +121,7 @@ The application includes accessibility-focused features such as:
 ## 🏠 GyanPariksha Home Screen
 
 <p align="center">
-  <img src="assets/images/home.png" alt="GyanPariksha Home Screen" width="100%">
+  <img src="assets/images/home1.png" alt="GyanPariksha Home Screen" width="100%">
 </p>
 
 ---
