@@ -1,0 +1,1219 @@
+/* ======================================================
+   QuizOnline — Animations
+   animations.css
+====================================================== */
+
+
+/* ======================================================
+   1. GLOBAL ANIMATION SETTINGS
+====================================================== */
+
+* {
+    --animation-fast: 0.2s;
+    --animation-normal: 0.35s;
+    --animation-slow: 0.6s;
+}
+
+
+/* ======================================================
+   2. PAGE / SCREEN ANIMATIONS
+====================================================== */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes fadeOut {
+
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+
+}
+
+
+@keyframes fadeInUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes fadeInDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes fadeInLeft {
+
+    from {
+        opacity: 0;
+        transform: translateX(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+@keyframes fadeInRight {
+
+    from {
+        opacity: 0;
+        transform: translateX(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* ======================================================
+   3. SCREEN TRANSITION
+====================================================== */
+
+.screen.active {
+
+    animation:
+        fadeInUp 0.45s ease both;
+
+}
+
+
+.screen {
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+/* ======================================================
+   4. QUIZ CARD
+====================================================== */
+
+@keyframes quizCardEnter {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(20px)
+            scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+.quiz-card,
+.quiz-container,
+.question-card {
+
+    animation:
+        quizCardEnter
+        0.5s
+        ease
+        both;
+
+}
+
+
+/* ======================================================
+   5. QUESTION ANIMATION
+====================================================== */
+
+@keyframes questionEnter {
+
+    from {
+        opacity: 0;
+        transform:
+            translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateX(0);
+    }
+
+}
+
+
+.question {
+
+    animation:
+        questionEnter
+        0.4s
+        ease
+        both;
+
+}
+
+
+/* ======================================================
+   6. ANSWER OPTIONS
+====================================================== */
+
+@keyframes optionEnter {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+.quiz-option {
+
+    animation:
+        optionEnter
+        0.35s
+        ease
+        both;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+
+}
+
+
+/* Stagger answer options */
+
+.quiz-option:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.quiz-option:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.quiz-option:nth-child(3) {
+    animation-delay: 0.15s;
+}
+
+.quiz-option:nth-child(4) {
+    animation-delay: 0.2s;
+}
+
+.quiz-option:nth-child(5) {
+    animation-delay: 0.25s;
+}
+
+
+/* ======================================================
+   7. OPTION HOVER
+====================================================== */
+
+.quiz-option:not(:disabled):hover {
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.quiz-option:not(:disabled):active {
+
+    transform:
+        translateY(0)
+        scale(0.98);
+
+}
+
+
+/* ======================================================
+   8. CORRECT ANSWER
+====================================================== */
+
+@keyframes correctAnswer {
+
+    0% {
+        transform: scale(1);
+    }
+
+    40% {
+        transform: scale(1.03);
+    }
+
+    70% {
+        transform: scale(0.99);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+.quiz-option.correct {
+
+    animation:
+        correctAnswer
+        0.45s
+        ease;
+
+}
+
+
+/* ======================================================
+   9. INCORRECT ANSWER
+====================================================== */
+
+@keyframes incorrectAnswer {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-7px);
+    }
+
+    40% {
+        transform: translateX(7px);
+    }
+
+    60% {
+        transform: translateX(-5px);
+    }
+
+    80% {
+        transform: translateX(5px);
+    }
+
+}
+
+
+.quiz-option.incorrect {
+
+    animation:
+        incorrectAnswer
+        0.45s
+        ease;
+
+}
+
+
+/* ======================================================
+   10. BUTTON ANIMATIONS
+====================================================== */
+
+button {
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+
+}
+
+
+button:not(:disabled):hover {
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+button:not(:disabled):active {
+
+    transform:
+        translateY(0)
+        scale(0.98);
+
+}
+
+
+button:disabled {
+
+    cursor: not-allowed;
+
+    opacity: 0.65;
+
+}
+
+
+/* ======================================================
+   11. START BUTTON
+====================================================== */
+
+@keyframes startButtonPulse {
+
+    0% {
+        box-shadow:
+            0 0 0 0
+            rgba(99, 102, 241, 0.25);
+    }
+
+    70% {
+        box-shadow:
+            0 0 0 12px
+            rgba(99, 102, 241, 0);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 0
+            rgba(99, 102, 241, 0);
+    }
+
+}
+
+
+#startQuiz,
+#start {
+
+    animation:
+        startButtonPulse
+        2.5s
+        infinite;
+
+}
+
+
+/* ======================================================
+   12. PROGRESS BAR
+====================================================== */
+
+@keyframes progressGlow {
+
+    0% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(1.15);
+    }
+
+    100% {
+        filter: brightness(1);
+    }
+
+}
+
+
+#progressBar {
+
+    transition:
+        width 0.45s
+        cubic-bezier(
+            0.4,
+            0,
+            0.2,
+            1
+        );
+
+    animation:
+        progressGlow
+        2s
+        ease-in-out
+        infinite;
+
+}
+
+
+/* ======================================================
+   13. TIMER
+====================================================== */
+
+@keyframes timerPulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+#timer {
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+/*
+ * Optional class that can be added
+ * when the timer is running low.
+ */
+
+#timer.warning {
+
+    animation:
+        timerPulse
+        0.8s
+        ease-in-out
+        infinite;
+
+}
+
+
+/* ======================================================
+   14. RESULT SCREEN
+====================================================== */
+
+@keyframes resultEnter {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(30px)
+            scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+.result,
+.result-card {
+
+    animation:
+        resultEnter
+        0.6s
+        cubic-bezier(
+            0.2,
+            0.8,
+            0.2,
+            1
+        )
+        both;
+
+}
+
+
+/* ======================================================
+   15. SCORE ANIMATION
+====================================================== */
+
+@keyframes scoreReveal {
+
+    from {
+        opacity: 0;
+        transform:
+            scale(0.5);
+    }
+
+    60% {
+        transform:
+            scale(1.1);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            scale(1);
+    }
+
+}
+
+
+#score {
+
+    animation:
+        scoreReveal
+        0.7s
+        ease
+        both;
+
+}
+
+
+/* ======================================================
+   16. RESULT STATISTICS
+====================================================== */
+
+@keyframes statReveal {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+.result-stat,
+.stat-card,
+.statistics-card {
+
+    animation:
+        statReveal
+        0.45s
+        ease
+        both;
+
+}
+
+
+.result-stat:nth-child(1),
+.stat-card:nth-child(1),
+.statistics-card:nth-child(1) {
+
+    animation-delay: 0.1s;
+
+}
+
+
+.result-stat:nth-child(2),
+.stat-card:nth-child(2),
+.statistics-card:nth-child(2) {
+
+    animation-delay: 0.2s;
+
+}
+
+
+.result-stat:nth-child(3),
+.stat-card:nth-child(3),
+.statistics-card:nth-child(3) {
+
+    animation-delay: 0.3s;
+
+}
+
+
+.result-stat:nth-child(4),
+.stat-card:nth-child(4),
+.statistics-card:nth-child(4) {
+
+    animation-delay: 0.4s;
+
+}
+
+
+/* ======================================================
+   17. SUCCESS ICON
+====================================================== */
+
+@keyframes successIcon {
+
+    0% {
+        opacity: 0;
+        transform:
+            scale(0)
+            rotate(-20deg);
+    }
+
+    70% {
+        transform:
+            scale(1.15)
+            rotate(5deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform:
+            scale(1)
+            rotate(0);
+    }
+
+}
+
+
+.success-icon,
+.result-icon {
+
+    animation:
+        successIcon
+        0.7s
+        cubic-bezier(
+            0.175,
+            0.885,
+            0.32,
+            1.275
+        )
+        both;
+
+}
+
+
+/* ======================================================
+   18. ERROR MESSAGE
+====================================================== */
+
+@keyframes errorEnter {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(-15px)
+            scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+.error-message {
+
+    opacity: 0;
+
+    transform:
+        translateY(-15px);
+
+}
+
+
+.error-message.show {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+    animation:
+        errorEnter
+        0.35s
+        ease
+        both;
+
+}
+
+
+/* ======================================================
+   19. LOADING ANIMATION
+====================================================== */
+
+@keyframes spin {
+
+    from {
+        transform:
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+
+}
+
+
+.loading-spinner,
+.spinner {
+
+    animation:
+        spin
+        0.8s
+        linear
+        infinite;
+
+}
+
+
+/* ======================================================
+   20. DOT LOADING
+====================================================== */
+
+@keyframes loadingDots {
+
+    0%,
+    80%,
+    100% {
+        opacity: 0.3;
+        transform:
+            scale(0.8);
+    }
+
+    40% {
+        opacity: 1;
+        transform:
+            scale(1);
+    }
+
+}
+
+
+.loading-dot {
+
+    animation:
+        loadingDots
+        1.4s
+        infinite
+        ease-in-out;
+
+}
+
+
+.loading-dot:nth-child(2) {
+
+    animation-delay:
+        0.2s;
+
+}
+
+
+.loading-dot:nth-child(3) {
+
+    animation-delay:
+        0.4s;
+
+}
+
+
+/* ======================================================
+   21. FLOATING EFFECT
+====================================================== */
+
+@keyframes floating {
+
+    0% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-8px);
+    }
+
+    100% {
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+.floating {
+
+    animation:
+        floating
+        3s
+        ease-in-out
+        infinite;
+
+}
+
+
+/* ======================================================
+   22. LOGO ANIMATION
+====================================================== */
+
+@keyframes logoEntrance {
+
+    from {
+        opacity: 0;
+        transform:
+            scale(0.8)
+            rotate(-5deg);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            scale(1)
+            rotate(0);
+    }
+
+}
+
+
+.logo {
+
+    animation:
+        logoEntrance
+        0.6s
+        ease
+        both;
+
+}
+
+
+/* ======================================================
+   23. NAVIGATION ANIMATION
+====================================================== */
+
+.nav-item {
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+
+}
+
+
+.nav-item:hover {
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* ======================================================
+   24. CARD HOVER
+====================================================== */
+
+.card,
+.quiz-card,
+.category-card,
+.stat-card {
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.card:hover,
+.quiz-card:hover,
+.category-card:hover,
+.stat-card:hover {
+
+    transform:
+        translateY(-4px);
+
+}
+
+
+/* ======================================================
+   25. CATEGORY SELECTION
+====================================================== */
+
+.category-option,
+.category-card {
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+
+}
+
+
+.category-option:hover,
+.category-card:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.01);
+
+}
+
+
+/* ======================================================
+   26. DIFFICULTY SELECTION
+====================================================== */
+
+.difficulty-option {
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.difficulty-option:hover {
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+/* ======================================================
+   27. FOCUS ANIMATION
+====================================================== */
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    animation:
+        focusGlow
+        0.35s
+        ease
+        both;
+
+}
+
+
+@keyframes focusGlow {
+
+    from {
+        transform:
+            scale(1);
+    }
+
+    50% {
+        transform:
+            scale(1.01);
+    }
+
+    to {
+        transform:
+            scale(1);
+    }
+
+}
+
+
+/* ======================================================
+   28. PAGE BACKGROUND
+====================================================== */
+
+@keyframes backgroundFloat {
+
+    0% {
+        background-position:
+            0% 50%;
+    }
+
+    50% {
+        background-position:
+            100% 50%;
+    }
+
+    100% {
+        background-position:
+            0% 50%;
+    }
+
+}
+
+
+/*
+ * Apply this only if your style.css
+ * uses a gradient background.
+ */
+
+body.animated-background {
+
+    background-size:
+        200% 200%;
+
+    animation:
+        backgroundFloat
+        12s
+        ease
+        infinite;
+
+}
+
+
+/* ======================================================
+   29. PARTICLES
+====================================================== */
+
+@keyframes particleFloat {
+
+    0% {
+        opacity: 0;
+        transform:
+            translateY(20px)
+            scale(0.8);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translateY(-100px)
+            scale(1.1);
+    }
+
+}
+
+
+.particle {
+
+    animation:
+        particleFloat
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+/* ======================================================
+   30. MODAL
+====================================================== */
+
+@keyframes modalEnter {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(25px)
+            scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+.modal {
+
+    animation:
+        modalEnter
+        0.35s
+        ease
+        both;
+
+}
+
+
+/* ======================================================
+   31. TOOLTIP
+====================================================== */
+
+@keyframes tooltipEnter {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+.tooltip {
+
+    animation:
+        tooltipEnter
+        0.2s
+        ease
+        both;
+
+}
+
+
+/* ======================================================
+   32. REDUCED MOTION
+====================================================== */
+
+@media (
+    prefers-reduced-motion: reduce
+) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+
+        scroll-behavior:
+            auto !important;
+
+    }
+
+}
