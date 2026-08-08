@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="QuizOnline — Test your knowledge with interactive online quizzes."
+    >
+
+    <title>QuizOnline — Test Your Knowledge</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Animations -->
+    <link rel="stylesheet" href="css/animations.css">
+
+    <!-- Responsive Design -->
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- ==================================================
+         BACKGROUND EFFECTS
+    =================================================== -->
+
+    <div class="background" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+
+    <!-- ==================================================
+         MAIN APPLICATION
+    =================================================== -->
+
+    <main class="app-container">
+
+
+        <!-- ==================================================
+             HEADER
+        =================================================== -->
+
+        <header class="header">
+
+            <div class="brand">
+
+                <div class="logo">
+                    🧠
+                </div>
+
+                <div class="brand-text">
+
+                    <h1>QuizOnline</h1>
+
+                    <p>
+                        Test your knowledge. Challenge yourself.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="theme-btn"
+                id="themeToggle"
+                type="button"
+                aria-label="Toggle theme"
+            >
+                🌙
+            </button>
+
+        </header>
+
+
+        <!-- ==================================================
+             HOME SCREEN
+        =================================================== -->
+
+        <section
+            class="screen home-screen active"
+            id="homeScreen"
+        >
+
+            <div class="hero">
+
+                <div class="hero-badge">
+                    <span>✨</span>
+                    Interactive Knowledge Challenge
+                </div>
+
+                <h2>
+                    How Much Do
+                    <span>You Know?</span>
+                </h2>
+
+                <p>
+                    Challenge yourself with engaging quizzes,
+                    improve your knowledge, and track your
+                    performance.
+                </p>
+
+            </div>
+
+
+            <!-- ==================================================
+                 QUIZ SETTINGS
+            =================================================== -->
+
+            <div class="quiz-settings">
+
+
+                <!-- CATEGORY -->
+
+                <div class="setting-card">
+
+                    <div class="setting-icon">
+                        📚
+                    </div>
+
+                    <div class="setting-content">
+
+                        <label for="category">
+                            Quiz Category
+                        </label>
+
+                        <select id="category">
+
+                            <option value="all">
+                                All Categories
+                            </option>
+
+                            <option value="computer-science">
+                                Computer Science
+                            </option>
+
+                            <option value="web-development">
+                                Web Development
+                            </option>
+
+                            <option value="programming">
+                                Programming
+                            </option>
+
+                            <option value="database">
+                                Database
+                            </option>
+
+                            <option value="cybersecurity">
+                                Cybersecurity
+                            </option>
+
+                            <option value="cloud">
+                                Cloud Computing
+                            </option>
+
+                            <option value="ai">
+                                Artificial Intelligence
+                            </option>
+
+                            <option value="general">
+                                General Knowledge
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DIFFICULTY -->
+
+                <div class="setting-card">
+
+                    <div class="setting-icon">
+                        🎯
+                    </div>
+
+                    <div class="setting-content">
+
+                        <label for="difficulty">
+                            Difficulty
+                        </label>
+
+                        <select id="difficulty">
+
+                            <option value="easy">
+                                Easy
+                            </option>
+
+                            <option value="medium" selected>
+                                Medium
+                            </option>
+
+                            <option value="hard">
+                                Hard
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUESTION COUNT -->
+
+                <div class="setting-card">
+
+                    <div class="setting-icon">
+                        🔢
+                    </div>
+
+                    <div class="setting-content">
+
+                        <label for="questionCount">
+                            Questions
+                        </label>
+
+                        <select id="questionCount">
+
+                            <option value="5">
+                                5 Questions
+                            </option>
+
+                            <option value="10" selected>
+                                10 Questions
+                            </option>
+
+                            <option value="15">
+                                15 Questions
+                            </option>
+
+                            <option value="20">
+                                20 Questions
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TIME -->
+
+                <div class="setting-card">
+
+                    <div class="setting-icon">
+                        ⏱️
+                    </div>
+
+                    <div class="setting-content">
+
+                        <label for="quizTime">
+                            Time Per Question
+                        </label>
+
+                        <select id="quizTime">
+
+                            <option value="15">
+                                15 Seconds
+                            </option>
+
+                            <option value="30" selected>
+                                30 Seconds
+                            </option>
+
+                            <option value="45">
+                                45 Seconds
+                            </option>
+
+                            <option value="60">
+                                60 Seconds
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- START BUTTON -->
+
+            <div class="home-actions">
+
+                <button
+                    class="primary-btn"
+                    id="startQuiz"
+                    type="button"
+                >
+
+                    <span>Start Quiz</span>
+
+                    <span class="btn-icon">
+                        →
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <!-- QUICK STATS -->
+
+            <div class="quick-stats">
+
+                <div>
+                    <strong>8+</strong>
+                    <span>Categories</span>
+                </div>
+
+                <div>
+                    <strong>100+</strong>
+                    <span>Questions</span>
+                </div>
+
+                <div>
+                    <strong>3</strong>
+                    <span>Difficulty Levels</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             QUIZ SCREEN
+        =================================================== -->
+
+        <section
+            class="screen quiz-screen"
+            id="quizScreen"
+        >
+
+
+            <!-- QUIZ HEADER -->
+
+            <div class="quiz-header">
+
+                <div class="quiz-progress-info">
+
+                    <span class="question-label">
+                        QUESTION
+                    </span>
+
+                    <span id="questionNumber">
+                        01 / 10
+                    </span>
+
+                </div>
+
+
+                <!-- TIMER -->
+
+                <div class="quiz-timer">
+
+                    <div class="timer-ring">
+
+                        <svg
+                            viewBox="0 0 100 100"
+                            aria-hidden="true"
+                        >
+
+                            <circle
+                                class="timer-bg"
+                                cx="50"
+                                cy="50"
+                                r="42"
+                            ></circle>
+
+                            <circle
+                                class="timer-progress"
+                                id="timerProgress"
+                                cx="50"
+                                cy="50"
+                                r="42"
+                            ></circle>
+
+                        </svg>
+
+                        <span id="timer">
+                            30
+                        </span>
+
+                    </div>
+
+                    <small>
+                        seconds
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROGRESS BAR -->
+
+            <div class="progress-container">
+
+                <div class="progress-track">
+
+                    <div
+                        class="progress-fill"
+                        id="progressFill"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION CARD -->
+
+            <div class="question-card">
+
+
+                <div class="question-category">
+
+                    <span id="currentCategory">
+                        Computer Science
+                    </span>
+
+                    <span
+                        class="difficulty-badge"
+                        id="currentDifficulty"
+                    >
+                        Medium
+                    </span>
+
+                </div>
+
+
+                <h2 id="questionText">
+                    Question will appear here.
+                </h2>
+
+
+                <!-- ANSWERS -->
+
+                <div
+                    class="answers"
+                    id="answersContainer"
+                >
+
+                    <button
+                        class="answer-option"
+                        type="button"
+                        data-answer="0"
+                    >
+
+                        <span class="answer-letter">
+                            A
+                        </span>
+
+                        <span class="answer-text">
+                            Answer option
+                        </span>
+
+                        <span class="answer-status"></span>
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        type="button"
+                        data-answer="1"
+                    >
+
+                        <span class="answer-letter">
+                            B
+                        </span>
+
+                        <span class="answer-text">
+                            Answer option
+                        </span>
+
+                        <span class="answer-status"></span>
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        type="button"
+                        data-answer="2"
+                    >
+
+                        <span class="answer-letter">
+                            C
+                        </span>
+
+                        <span class="answer-text">
+                            Answer option
+                        </span>
+
+                        <span class="answer-status"></span>
+
+                    </button>
+
+
+                    <button
+                        class="answer-option"
+                        type="button"
+                        data-answer="3"
+                    >
+
+                        <span class="answer-letter">
+                            D
+                        </span>
+
+                        <span class="answer-text">
+                            Answer option
+                        </span>
+
+                        <span class="answer-status"></span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- QUIZ FOOTER -->
+
+                <div class="question-footer">
+
+                    <span id="answerFeedback">
+                        Select an answer to continue.
+                    </span>
+
+                    <button
+                        class="next-btn"
+                        id="nextQuestion"
+                        type="button"
+                        disabled
+                    >
+                        Next Question →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             RESULT SCREEN
+        =================================================== -->
+
+        <section
+            class="screen result-screen"
+            id="resultScreen"
+        >
+
+
+            <!-- RESULT HERO -->
+
+            <div class="result-hero">
+
+                <div class="result-icon">
+                    🏆
+                </div>
+
+                <span class="result-label">
+                    QUIZ COMPLETED
+                </span>
+
+                <h2>
+                    Great Job!
+                </h2>
+
+                <p id="resultMessage">
+                    Your quiz has been completed.
+                </p>
+
+            </div>
+
+
+            <!-- SCORE -->
+
+            <div class="score-display">
+
+                <div class="score-circle">
+
+                    <svg
+                        viewBox="0 0 200 200"
+                        aria-hidden="true"
+                    >
+
+                        <circle
+                            class="score-bg"
+                            cx="100"
+                            cy="100"
+                            r="85"
+                        ></circle>
+
+                        <circle
+                            class="score-progress"
+                            id="scoreProgress"
+                            cx="100"
+                            cy="100"
+                            r="85"
+                        ></circle>
+
+                    </svg>
+
+                    <div class="score-content">
+
+                        <strong id="finalScore">
+                            0
+                        </strong>
+
+                        <span id="totalQuestions">
+                            / 10
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <span class="score-caption">
+                    Final Score
+                </span>
+
+            </div>
+
+
+            <!-- RESULT STATISTICS -->
+
+            <div class="result-stats">
+
+                <div class="result-card">
+
+                    <span class="result-card-icon">
+                        ✅
+                    </span>
+
+                    <strong id="correctAnswers">
+                        0
+                    </strong>
+
+                    <small>
+                        Correct
+                    </small>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span class="result-card-icon">
+                        ❌
+                    </span>
+
+                    <strong id="wrongAnswers">
+                        0
+                    </strong>
+
+                    <small>
+                        Wrong
+                    </small>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span class="result-card-icon">
+                        🎯
+                    </span>
+
+                    <strong id="accuracy">
+                        0%
+                    </strong>
+
+                    <small>
+                        Accuracy
+                    </small>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span class="result-card-icon">
+                        🏅
+                    </span>
+
+                    <strong id="bestScore">
+                        0
+                    </strong>
+
+                    <small>
+                        Best Score
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESULT ACTIONS -->
+
+            <div class="result-actions">
+
+                <button
+                    class="primary-btn"
+                    id="retryQuiz"
+                    type="button"
+                >
+
+                    <span>
+                        Try Again
+                    </span>
+
+                    <span>
+                        ↻
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="secondary-btn"
+                    id="homeButton"
+                    type="button"
+                >
+
+                    <span>
+                        ←
+                    </span>
+
+                    <span>
+                        Back to Home
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ==================================================
+         LOADING OVERLAY
+    =================================================== -->
+
+    <div
+        class="loading-overlay"
+        id="loadingOverlay"
+        aria-hidden="true"
+    >
+
+        <div class="loader">
+
+            <div class="loader-icon">
+                🧠
+            </div>
+
+            <span>
+                Preparing your quiz...
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    =================================================== -->
+
+    <script src="js/questions.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
