@@ -13,6 +13,12 @@ const UI = {
 
     elements: {},
 
+    timerInterval: null,
+
+    timeLimit: 30,
+
+    timeRemaining: 30,
+
 
     /* --------------------------------------------------
        INITIALIZE UI
@@ -81,6 +87,9 @@ const UI = {
             questionCount:
                 document.querySelector("#questionCount"),
 
+            quizTime:
+                document.querySelector("#quizTime"),
+
 
             /* Quiz */
 
@@ -106,6 +115,9 @@ const UI = {
 
             timer:
                 document.querySelector("#timer"),
+
+            timerProgress:
+                document.querySelector("#timerProgress"),
 
 
             /* Buttons */
@@ -227,6 +239,14 @@ const UI = {
             );
 
 
+        const timeLimit =
+            parseInt(
+                this.elements.quizTime?.value ||
+                "30",
+                10
+            );
+
+
         const question =
             Quiz.start(
                 category,
@@ -249,6 +269,8 @@ const UI = {
         this.showQuiz();
 
         this.displayQuestion(question);
+
+        this.startTimer(timeLimit);
 
     },
 
@@ -531,10 +553,110 @@ const UI = {
 
 
     /* --------------------------------------------------
+       QUIZ TIMER
+    -------------------------------------------------- */
+
+    startTimer(seconds) {
+
+        this.stopTimer();
+
+        this.timeLimit =
+            Number.isFinite(seconds) && seconds > 0
+                ? seconds
+                : 30;
+
+        this.timeRemaining =
+            this.timeLimit;
+
+        this.updateTimerDisplay();
+
+        this.timerInterval =
+            setInterval(
+                () => {
+
+                    this.timeRemaining =
+                        Math.max(
+                            this.timeRemaining - 1,
+                            0
+                        );
+
+                    this.updateTimerDisplay();
+
+                    if (this.timeRemaining === 0) {
+
+                        this.stopTimer();
+
+                        if (!Quiz.state.completed) {
+
+                            Quiz.complete();
+
+                            this.showResults();
+
+                        }
+
+                    }
+
+                },
+                1000
+            );
+
+    },
+
+
+    stopTimer() {
+
+        if (this.timerInterval) {
+
+            clearInterval(
+                this.timerInterval
+            );
+
+            this.timerInterval = null;
+
+        }
+
+    },
+
+
+    updateTimerDisplay() {
+
+        if (this.elements.timer) {
+
+            this.elements.timer.textContent =
+                this.timeRemaining;
+
+        }
+
+
+        if (this.elements.timerProgress) {
+
+            const circumference =
+                264;
+
+            const percentage =
+                this.timeLimit
+                    ? this.timeRemaining /
+                        this.timeLimit
+                    : 0;
+
+            this.elements.timerProgress.style.strokeDashoffset =
+                String(
+                    circumference *
+                    (1 - percentage)
+                );
+
+        }
+
+    },
+
+
+    /* --------------------------------------------------
        SHOW RESULT
     -------------------------------------------------- */
 
     showResults() {
+
+    this.stopTimer();
 
     const result =
         Quiz.getResult();
@@ -733,7 +855,14 @@ const UI = {
 
     restartQuiz() {
 
+        this.stopTimer();
+
         Quiz.reset();
+
+        this.timeRemaining =
+            this.timeLimit;
+
+        this.updateTimerDisplay();
 
         this.showHome();
 
